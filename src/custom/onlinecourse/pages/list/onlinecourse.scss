@@ -1,0 +1,51 @@
+page-onlinecourse {
+    ion-content{
+        background: url("../assets/img/bg-page.jpg") center center;
+	    background-size: cover;
+    }
+    #ion-list-online-course{
+        ion-card{
+            background: rgba(255, 255,255,0.5);
+        }
+        .title{
+            font-weight: bold;
+        }      
+        .left-panel{
+            display: block;
+            width: 30%;
+            float: left;
+        }
+        .right-panel{
+            width: 70%;
+            float: right;
+        }
+        .right-panel{
+            .top .date-display{
+                font-style: italic
+            }
+            .top > *{
+                margin-right: 4px;
+            }
+
+            .bottom{
+                display: table;
+            }
+            .bottom > *{
+                margin-right: 4px;
+            }
+            .bottom button{
+                padding: 8px;
+            }
+            .bottom .person-panel{
+                display: table-cell;
+                vertical-align: middle;
+                padding-right: 4px;
+            }
+            .bottom .person-panel .person-icon{
+                display: block;
+                text-align: center;
+            }
+
+        }                
+    }
+}

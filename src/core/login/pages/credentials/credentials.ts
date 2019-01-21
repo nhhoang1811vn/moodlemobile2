@@ -25,6 +25,7 @@ import { CoreContentLinksDelegate } from '@core/contentlinks/providers/delegate'
 import { CoreContentLinksHelperProvider } from '@core/contentlinks/providers/helper';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+
 /**
  * Page to enter the user credentials.
  */
@@ -44,13 +45,13 @@ export class CoreLoginCredentialsPage {
     identityProviders: any[];
     pageLoaded = false;
     isBrowserSSO = false;
-    isFixedUrlSet = false;
 
     protected siteConfig;
     protected eventThrown = false;
     protected viewLeft = false;
     protected siteId: string;
     protected urlToOpen: string;
+
 
     constructor(private navCtrl: NavController, navParams: NavParams, fb: FormBuilder, private appProvider: CoreAppProvider,
             private sitesProvider: CoreSitesProvider, private loginHelper: CoreLoginHelperProvider,
@@ -65,7 +66,11 @@ export class CoreLoginCredentialsPage {
         this.credForm = fb.group({
             username: [navParams.get('username') || '', Validators.required],
             password: ['', Validators.required]
-        });
+        });                
+        this.credForm = fb.group({
+            username: 'Demo3',
+            password: 'Abcd@454647'
+        })    
     }
 
     /**
@@ -73,9 +78,8 @@ export class CoreLoginCredentialsPage {
      */
     ionViewDidLoad(): void {
         this.treatSiteConfig();
-        this.isFixedUrlSet = this.loginHelper.isFixedUrlSet();
 
-        if (this.isFixedUrlSet) {
+        if (this.loginHelper.isFixedUrlSet()) {
             // Fixed URL, we need to check if it uses browser SSO login.
             this.checkSite(this.siteUrl);
         } else {
@@ -163,15 +167,8 @@ export class CoreLoginCredentialsPage {
 
     /**
      * Tries to authenticate the user.
-     *
-     * @param {Event} [e] Event.
      */
-    login(e?: Event): void {
-        if (e) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-
+    login(): void {
         this.appProvider.closeKeyboard();
 
         // Get input data.
@@ -235,7 +232,7 @@ export class CoreLoginCredentialsPage {
                 }
             });
         }).catch((error) => {
-            this.loginHelper.treatUserTokenError(siteUrl, error, username, password);
+            this.loginHelper.treatUserTokenError(siteUrl, error);
         }).finally(() => {
             modal.dismiss();
         });
@@ -245,7 +242,7 @@ export class CoreLoginCredentialsPage {
      * Forgotten password button clicked.
      */
     forgottenPassword(): void {
-        if (this.siteConfig && this.siteConfig.forgottenpasswordurl) {
+       /* if (this.siteConfig && this.siteConfig.forgottenpasswordurl) {
             // URL set, open it.
             this.utils.openInApp(this.siteConfig.forgottenpasswordurl);
 
@@ -264,7 +261,11 @@ export class CoreLoginCredentialsPage {
             }
         }).finally(() => {
             modal.dismiss();
+        });*/
+        this.navCtrl.push('CoreLoginForgottenPasswordPage', {
+            siteUrl: this.siteUrl, username: this.credForm.value.username
         });
+
     }
 
     /**

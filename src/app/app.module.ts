@@ -123,6 +123,7 @@ import { AddonNotificationsModule } from '@addon/notifications/notifications.mod
 import { AddonRemoteThemesModule } from '@addon/remotethemes/remotethemes.module';
 import { AddonQbehaviourModule } from '@addon/qbehaviour/qbehaviour.module';
 import { AddonQtypeModule } from '@addon/qtype/qtype.module';
+import { OnlineCoursePageModule } from '../custom/onlinecourse/pages/list/onlinecourse.module';
 
 // For translate loader. AoT requires an exported function for factories.
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
@@ -240,6 +241,8 @@ export const CORE_PROVIDERS: any[] = [
         AddonRemoteThemesModule,
         AddonQbehaviourModule,
         AddonQtypeModule
+        //custom
+        //OnlineCoursePageModule
     ],
     bootstrap: [IonicApp],
     entryComponents: [

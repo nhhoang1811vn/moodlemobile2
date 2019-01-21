@@ -192,7 +192,7 @@ var paths = {
 
 // Build the language files into a single file per language.
 gulp.task('lang', function(done) {
-    buildLang('en', paths.lang, path.join(paths.assets, 'lang'), done);
+    //buildLang('en', paths.lang, path.join(paths.assets, 'lang'), done);
 });
 
 // Convert config.json into a TypeScript class.
@@ -260,7 +260,8 @@ gulp.task('config', function(done) {
     });
 });
 
-gulp.task('default', gulp.parallel('lang', 'config'));
+//gulp.task('default', gulp.parallel('lang', 'config'));
+gulp.task('default', gulp.parallel('config'));
 
 gulp.task('watch', function() {
     var langsPaths = paths.lang.map(function(path) {

@@ -1,0 +1,24 @@
+page-onlinecourse-detail {
+    ion-content{
+        background: url("../assets/img/bg-page.jpg") center center;
+	    background-size: cover;
+    }
+    #course-title{
+        text-align: center;
+        color: orange    
+    }
+    .divider{
+        background: orange
+    }
+    #course-image{
+
+    }
+    #course-image > img{
+        margin : auto;
+        width : 40%;
+    }
+    #intro-panel > div{
+        display: inline-block
+    }
+   
+}

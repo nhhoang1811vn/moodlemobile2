@@ -9,7 +9,8 @@
   "config": {
     "ionic_webpack": "./config/webpack.config.js",
     "ionic_copy": "./config/copy.config.js",
-    "ionic_sass": "./config/sass.config.js"
+    "ionic_sass": "./config/sass.config.js",
+    "ionic_enable_lint": false
   },
   "repository": {
     "type": "git",
@@ -79,10 +80,8 @@
     "@types/promise.prototype.finally": "2.0.2",
     "chart.js": "2.7.2",
     "com-darryncampbell-cordova-plugin-intent": "1.1.1",
-    "cordova-android": "7.1.2",
     "cordova-android-support-gradle-release": "2.0.1",
     "cordova-clipboard": "1.2.1",
-    "cordova-ios": "4.5.5",
     "cordova-plugin-app-event": "1.2.1",
     "cordova-plugin-badge": "0.8.8",
     "cordova-plugin-camera": "4.0.3",
@@ -116,7 +115,8 @@
     "sw-toolbox": "3.6.0",
     "ts-md5": "1.2.4",
     "web-animations-js": "2.3.1",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.26",
+    "cordova-android": "^7.1.4"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.9",
@@ -138,8 +138,7 @@
   },
   "cordova": {
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ],
     "plugins": {
       "com-darryncampbell-cordova-plugin-intent": {},
