@@ -14,8 +14,16 @@
     "customurlscheme": "moodlemobile",
     "siteurl": [
         {
-            "name" : "PNJ",
-            "url" : "https://daotao.pnj.com.vn" 
+            "name" : "Bank Top Learning",
+            "url" : "https://bank.toplearning.vn" 
+        },
+        {
+            "name" : "Test Site 1",
+            "url" : "https://testsite.net" 
+        },
+        {
+            "name" : "Test Site 2",
+            "url" : "https://testsite.net" 
         }
     ],
     "multisitesdisplay": "select",
