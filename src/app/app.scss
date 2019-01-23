@@ -17,7 +17,17 @@
 
 // Alignment
 // -------------------------
-
+ion-app.app-root{
+  ion-header{
+    .toolbar-background {
+      background: url("../assets/img/bg-toolbar.jpg") center center !important;
+      background-size: cover !important;
+    }
+    .toolbar-title {
+      font-size: 2.2rem;
+    }
+  }
+}
 ion-app.app-root {
   .text-left           { text-align: left; }
   .text-right          { text-align: right; }
