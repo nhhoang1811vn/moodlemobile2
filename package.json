@@ -54,7 +54,7 @@
     "@ionic-native/clipboard": "4.17.0",
     "@ionic-native/core": "4.11.0",
     "@ionic-native/device": "4.17.0",
-    "@ionic-native/file": "4.17.0",
+    "@ionic-native/file": "^4.17.0",
     "@ionic-native/file-opener": "4.17.0",
     "@ionic-native/file-transfer": "4.17.0",
     "@ionic-native/globalization": "4.17.0",
@@ -80,6 +80,7 @@
     "@types/promise.prototype.finally": "2.0.2",
     "chart.js": "2.7.2",
     "com-darryncampbell-cordova-plugin-intent": "1.1.1",
+    "cordova-android": "^7.1.4",
     "cordova-android-support-gradle-release": "2.0.1",
     "cordova-clipboard": "1.2.1",
     "cordova-plugin-app-event": "1.2.1",
@@ -105,6 +106,7 @@
     "es6-promise-plugin": "4.2.2",
     "font-awesome": "4.7.0",
     "ionic-angular": "3.9.2",
+    "ionic-image-loader": "^6.3.2",
     "ionicons": "3.0.0",
     "jszip": "3.1.5",
     "moment": "2.22.2",
@@ -115,8 +117,7 @@
     "sw-toolbox": "3.6.0",
     "ts-md5": "1.2.4",
     "web-animations-js": "2.3.1",
-    "zone.js": "0.8.26",
-    "cordova-android": "^7.1.4"
+    "zone.js": "0.8.26"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.9",

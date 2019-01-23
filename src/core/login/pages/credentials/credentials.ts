@@ -67,10 +67,10 @@ export class CoreLoginCredentialsPage {
             username: [navParams.get('username') || '', Validators.required],
             password: ['', Validators.required]
         });                
-        this.credForm = fb.group({
-            username: 'Demo3',
-            password: 'Abcd@454647'
-        })    
+        // this.credForm = fb.group({
+        //     username: 'Demo3',
+        //     password: 'Abcd@454647'
+        // })    
     }
 
     /**

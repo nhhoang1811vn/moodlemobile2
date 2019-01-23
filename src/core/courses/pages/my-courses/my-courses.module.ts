@@ -20,6 +20,7 @@ import { CoreComponentsModule } from '@components/components.module';
 import { CoreDirectivesModule } from '@directives/directives.module';
 import { CoreCoursesComponentsModule } from '../../components/components.module';
 
+
 @NgModule({
     declarations: [
         CoreCoursesMyCoursesPage,

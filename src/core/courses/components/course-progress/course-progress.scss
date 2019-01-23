@@ -6,14 +6,6 @@ ion-app.app-root core-courses-course-progress {
         flex-direction: column;
         align-self: stretch;
 
-        @for $i from 0 to length($core-course-image-background) {
-            &[course-color="#{$i}"] {
-                .core-course-thumb {
-                    background: nth($core-course-image-background, $i + 1);
-                }
-            }
-        }
-
         .core-course-thumb {
             padding-top: 40%;
             width: 100%;
@@ -23,16 +15,12 @@ ion-app.app-root core-courses-course-progress {
             position: relative;
             background-position: center;
             background-size: cover;
-
-            &.core-course-color-img {
-                background: white;
-            }
-
-            img {
+            
+            img-loader {
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                margin: auto;
+                margin: auto;                 
             }
         }
 

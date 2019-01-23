@@ -6,7 +6,7 @@
     "versionname" : "1.1.0",
     "cache_expiration_time" : 300000,
     "default_lang" : "vi",
-    "languages": {"vi": "Viet Name","en" : "English"},
+    "languages": {"vi": "Viet Nam","en" : "English"},
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
     "demo_sites": {},
@@ -14,19 +14,11 @@
     "customurlscheme": "moodlemobile",
     "siteurl": [
         {
-            "name" : "Bank Top Learning",
-            "url" : "https://bank.toplearning.vn" 
-        },
-        {
-            "name" : "Test Site 1",
-            "url" : "https://testsite1.toplearning.vn"
-        },
-        {
-            "name" : "Test Site 2",
-            "url" : "https://testsite2.toplearning.vn"
+            "name" : "PNJ",
+            "url" : "https://daotao.pnj.com.vn" 
         }
     ],
-    "multisitesdisplay": "list",
+    "multisitesdisplay": "select",
     "skipssoconfirmation": false,
     "forcedefaultlanguage": true,
     "privacypolicy": "https://toplearning.vn"

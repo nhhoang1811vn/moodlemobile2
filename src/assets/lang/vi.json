@@ -584,5 +584,8 @@
     "core.wsfunctionnotavailable": "Chức năng webservice không khả dụng.",
     "core.year": "năm",
     "core.years": "năm",
-    "core.yes": "Có"
+    "core.yes": "Có",
+    "custom.welcome-to" : "Chào mừng bạn đến với",
+    "custom.application" : "ỨNG DỤNG",
+    "custom.e-learning" : "Học Trực Tuyến"     
 }

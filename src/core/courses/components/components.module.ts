@@ -22,6 +22,7 @@ import { CorePipesModule } from '@pipes/pipes.module';
 import { CoreCoursesCourseProgressComponent } from '../components/course-progress/course-progress';
 import { CoreCoursesCourseListItemComponent } from '../components/course-list-item/course-list-item';
 import { CoreCoursesCourseOptionsMenuComponent } from '../components/course-options-menu/course-options-menu';
+import { IonicImageLoader } from 'ionic-image-loader';
 
 @NgModule({
     declarations: [
@@ -35,7 +36,8 @@ import { CoreCoursesCourseOptionsMenuComponent } from '../components/course-opti
         TranslateModule.forChild(),
         CoreComponentsModule,
         CoreDirectivesModule,
-        CorePipesModule
+        CorePipesModule,
+        IonicImageLoader
     ],
     providers: [
     ],

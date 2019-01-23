@@ -23,6 +23,7 @@ import { CoreCourseProvider } from '@core/course/providers/course';
 import { CoreCourseHelperProvider } from '@core/course/providers/helper';
 import { CoreCoursesCourseOptionsMenuComponent } from '../course-options-menu/course-options-menu';
 
+
 /**
  * This component is meant to display a course for a list of courses with progress.
  *
