@@ -126,6 +126,6 @@
     <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application/activity[@android:name='MainActivity']">
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true" />
     </edit-config>
-    <engine name="android" spec="^7.1.4" />
     <plugin name="cordova-plugin-file" spec="6.0.1" />
+    <engine name="android" spec="^7.1.4" />
 </widget>

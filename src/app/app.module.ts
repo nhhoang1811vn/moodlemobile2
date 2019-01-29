@@ -125,6 +125,7 @@ import { AddonQbehaviourModule } from '@addon/qbehaviour/qbehaviour.module';
 import { AddonQtypeModule } from '@addon/qtype/qtype.module';
 import { OnlineCoursePageModule } from '../custom/onlinecourse/pages/list/onlinecourse.module';
 import { IonicImageLoader } from 'ionic-image-loader';
+import { CustomApi } from '../providers/custom-api/custom-api';
 
 // For translate loader. AoT requires an exported function for factories.
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
@@ -287,6 +288,7 @@ export const CORE_PROVIDERS: any[] = [
         {provide: COMPILER_OPTIONS, useValue: {}, multi: true},
         {provide: JitCompilerFactory, useClass: JitCompilerFactory, deps: [COMPILER_OPTIONS]},
         {provide: LocationStrategy, useClass: MockLocationStrategy},
+    CustomApi,
     ]
 })
 export class AppModule {
