@@ -18,25 +18,8 @@ ion-app.app-root course-item {
         display: inline-block;
         .left-panel{
             width: 35%;
-            height: 100px;            
-            display: inline-block;
+            height: 110px;            
             float: left;
-            @for $i from 0 to length($core-course-image-background) {
-                &.core-course-color-#{$i} {
-                    background: nth($core-course-image-background, $i + 1);
-                }
-            }
-
-            &.core-course-color-img {
-                background: white;
-            }
-
-            img {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                margin: auto;
-            }
         }
         .right-panel{
             width: 65%;

@@ -9,6 +9,7 @@ import { CoreSiteHomeComponentsModule } from '@core/sitehome/components/componen
 import { CoreCoursesComponentsModule } from '@core/courses/components/components.module';
 //import { CustomComponentsModule } from 'custom/onlinecourse/components/components.module';
 import {CustomComponentsModule} from '../../components/components.module';
+import { IonicImageLoader } from 'ionic-image-loader';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import {CustomComponentsModule} from '../../components/components.module';
     CoreSiteHomeComponentsModule,
     CustomComponentsModule,
     IonicPageModule.forChild(OnlineCoursePage),
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    IonicImageLoader
+    
   ],
 })
 export class OnlineCoursePageModule {}

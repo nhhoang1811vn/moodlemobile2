@@ -163,7 +163,7 @@ export class CourseItemComponent implements OnInit, OnDestroy {
     }
     getDateTime(timeInMilis : any) : string{
         //alert(timeInMilis);
-        let date=new Date(timeInMilis);  
+        let date=new Date(timeInMilis*1000);  
         return (date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear());
     }
 }

@@ -12,8 +12,8 @@
     </div>
     
 
-    <div  (click)="openCourse(course)" class="core-course-color-{{course.id % 10}} left-panel" [class.core-course-color-img]="course.imageThumb">
-        <img *ngIf="course.imageThumb" [src]="course.imageThumb" core-external-content alt=""/>
+    <div  (click)="openCourse(course)" class="left-panel" [class.core-course-color-img]="course.imageThumb">
+        <img-loader *ngIf="course.image" [src]="course.image"></img-loader> 
     </div>
     <div class="right-panel">
         <div class="top">

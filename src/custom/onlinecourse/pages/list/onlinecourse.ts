@@ -9,6 +9,7 @@ import { CoreDomUtilsProvider } from '@providers/utils/dom';
 import { CoreCourseHelperProvider } from '@core/course/providers/helper';
 import { CoreCoursesHelperProvider } from '@core/courses/providers/helper';
 import { CoreCoursesProvider } from '@core/courses/providers/courses';
+import { CustomApi } from '@providers/custom-api/custom-api';
 
 
 @IonicPage()
@@ -46,7 +47,8 @@ showFilter = false;
     private courseOptionsDelegate: CoreCourseOptionsDelegate,
     private domUtils: CoreDomUtilsProvider,
     private courseHelper: CoreCourseHelperProvider,
-    private coursesHelper: CoreCoursesHelperProvider) {
+    private coursesHelper: CoreCoursesHelperProvider,
+    private customApi: CustomApi) {
   }
   ionViewDidLoad() {
     if (!this.courses.loaded) {
@@ -63,19 +65,19 @@ showFilter = false;
      */
     refreshMyOverview(refresher: any): Promise<any> {
       const promises = [];
-      promises.push(this.coursesProvider.invalidateUserCourses().finally(() => {
-          // Invalidate course completion data.
-          return this.coursesProvider.getUserCourses().then((courses) => {
-              return this.utils.allPromises(courses.map((course) => {
-                  return this.courseCompletionProvider.invalidateCourseCompletion(course.id);
-               }));
-          });
-      }));
+    //   promises.push(this.coursesProvider.invalidateUserCourses().finally(() => {
+    //       // Invalidate course completion data.
+    //       return this.coursesProvider.getUserCourses().then((courses) => {
+    //           return this.utils.allPromises(courses.map((course) => {
+    //               return this.courseCompletionProvider.invalidateCourseCompletion(course.id);
+    //            }));
+    //       });
+    //   }));
 
-      promises.push(this.courseOptionsDelegate.clearAndInvalidateCoursesOptions());
-      if (this.courseIds) {
-          promises.push(this.coursesProvider.invalidateCoursesByField('ids', this.courseIds));
-      }
+    //   promises.push(this.courseOptionsDelegate.clearAndInvalidateCoursesOptions());
+    //   if (this.courseIds) {
+    //       promises.push(this.coursesProvider.invalidateCoursesByField('ids', this.courseIds));
+    //   }
 
       return this.utils.allPromises(promises).finally(() => {
         this.prefetchIconsInitialized = false;
@@ -90,23 +92,25 @@ showFilter = false;
      * @return {Promise<any>} Promise resolved when done.
      */
     protected fetchMyOverviewCourses(): Promise<any> {
-      return this.fetchUserCourses().then((courses) => {
-          // Fetch course completion status.
-          return Promise.all(courses.map((course) => {
-              if (typeof course.enablecompletion != 'undefined' && course.enablecompletion == 0) {
-                  // Completion is disabled for this course, there is no need to fetch the completion status.
-                  return Promise.resolve(course);
-              }
+      return this.fetchUserCourses()
+    //   .then((courses) => {
+    //       // Fetch course completion status.
+    //       return Promise.all(courses.map((course) => {
+    //           if (typeof course.enablecompletion != 'undefined' && course.enablecompletion == 0) {
+    //               // Completion is disabled for this course, there is no need to fetch the completion status.
+    //               return Promise.resolve(course);
+    //           }
 
-              return this.courseCompletionProvider.getCompletion(course.id).catch(() => {
-                  // Ignore error, maybe course compleiton is disabled or user ha no permission.
-              }).then((completion) => {
-                  course.completed = completion && completion.completed;
+    //           return this.courseCompletionProvider.getCompletion(course.id).catch(() => {
+    //               // Ignore error, maybe course compleiton is disabled or user ha no permission.
+    //           }).then((completion) => {
+    //               course.completed = completion && completion.completed;
 
-                  return course;
-              });
-          }));
-      }).then((courses) => {
+    //               return course;
+    //           });
+    //       }));
+    //   })
+      .then((courses) => {
           const today = moment().unix();
 
           this.courses.past = [];
@@ -128,8 +132,8 @@ showFilter = false;
 
           this.courses.filter = '';
           this.showFilter = false;
-          this.filteredCourses = this.courses[this.courses.selected];
-
+          //this.filteredCourses = this.courses[this.courses.selected];
+          this.filteredCourses = courses;
           this.initPrefetchCoursesIcons();
       }).catch((error) => {
           this.domUtils.showErrorModalDefault(error, 'Error getting my overview data.');
@@ -141,35 +145,7 @@ showFilter = false;
      * @return {Promise<any[]>} Promise resolved when done.
      */
     protected fetchUserCourses(): Promise<any[]> {
-      return this.coursesProvider.getUserCourses().then((courses) => {
-          const promises = [],
-              courseIds = courses.map((course) => {
-              return course.id;
-          });
-
-          if (this.coursesProvider.canGetAdminAndNavOptions()) {
-              // Load course options of the course.
-              promises.push(this.coursesProvider.getCoursesAdminAndNavOptions(courseIds).then((options) => {
-                  courses.forEach((course) => {
-                      course.navOptions = options.navOptions[course.id];
-                      course.admOptions = options.admOptions[course.id];
-                  });
-              }));
-          }
-
-          this.courseIds = courseIds.join(',');
-
-          promises.push(this.coursesHelper.loadCoursesExtraInfo(courses));
-
-          return Promise.all(promises).then(() => {
-              return courses.sort((a, b) => {
-                  const compareA = a.fullname.toLowerCase(),
-                      compareB = b.fullname.toLowerCase();
-
-                  return compareA.localeCompare(compareB);
-              });
-          });
-      });
+      return this.customApi.getCourse()
   }
   /**
      * Initialize the prefetch icon for selected courses.

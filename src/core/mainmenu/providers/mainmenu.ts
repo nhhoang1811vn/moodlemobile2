@@ -51,7 +51,7 @@ export interface CoreMainMenuCustomItem {
  */
 @Injectable()
 export class CoreMainMenuProvider {
-    static NUM_MAIN_HANDLERS = 4;
+    static NUM_MAIN_HANDLERS = 1;
 
     constructor(private langProvider: CoreLangProvider, private sitesProvider: CoreSitesProvider) { }
 

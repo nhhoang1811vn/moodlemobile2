@@ -18,6 +18,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CourseItemComponent } from './course-item/course-item';
 import { CoreDirectivesModule } from '@directives/directives.module';
 import { CoreComponentsModule } from '@components/components.module';
+import { IonicImageLoader } from 'ionic-image-loader';
 
 
 @NgModule({
@@ -30,8 +31,8 @@ import { CoreComponentsModule } from '@components/components.module';
         IonicModule,    
         TranslateModule.forChild(),
         CoreDirectivesModule,
-        CoreComponentsModule
-       
+        CoreComponentsModule,
+        IonicImageLoader
     ],
     exports: [
         CourseItemComponent
