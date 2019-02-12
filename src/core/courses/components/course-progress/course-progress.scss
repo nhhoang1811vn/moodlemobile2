@@ -7,7 +7,7 @@ ion-app.app-root core-courses-course-progress {
         align-self: stretch;
 
         .core-course-thumb {
-            padding-top: 40%;
+            padding-top: 50%;
             width: 100%;
             overflow: hidden;
             cursor: pointer;
@@ -20,7 +20,8 @@ ion-app.app-root core-courses-course-progress {
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                margin: auto;                 
+                margin: auto; 
+                background-size: cover !important;             
             }
         }
 

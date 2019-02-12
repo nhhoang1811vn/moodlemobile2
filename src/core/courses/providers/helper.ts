@@ -16,6 +16,7 @@ import { Injectable } from '@angular/core';
 import { CoreUtilsProvider } from '@providers/utils/utils';
 import { CoreCoursesProvider } from './courses';
 import { AddonCourseCompletionProvider } from '@addon/coursecompletion/providers/coursecompletion';
+import {CustomApi} from '@providers/custom-api/custom-api'
 
 /**
  * Helper to gather some common courses functions.
@@ -24,7 +25,8 @@ import { AddonCourseCompletionProvider } from '@addon/coursecompletion/providers
 export class CoreCoursesHelperProvider {
 
     constructor(private coursesProvider: CoreCoursesProvider, private utils: CoreUtilsProvider,
-        private courseCompletionProvider: AddonCourseCompletionProvider) { }
+        private courseCompletionProvider: AddonCourseCompletionProvider,
+        private customApi : CustomApi) { }
 
     /**
      * Given a course object returned by core_enrol_get_users_courses and another one returned by core_course_get_courses_by_field,
@@ -107,6 +109,18 @@ export class CoreCoursesHelperProvider {
                         course.admOptions = options.admOptions[course.id];
                     });
                 }));
+            }
+            if (courseIds.length > 0){
+                let index = 0
+                promises.push(this.customApi.getImagesByCourseIds(courseIds)
+                .then((results)=> {
+                    courses.forEach((course) => {
+                        if (index < results.length){
+                            course.image = results[index++]
+                        }
+                        
+                    })
+                }))
             }
 
             promises.push(this.loadCoursesExtraInfo(courses));

@@ -1,9 +1,9 @@
 {
-    "app_id" : "com.appaz.toplearning",
+    "app_id" : "com.socialmedia.toplearning",
     "appname": "TopLearning",
     "desktopappname": "TopLearning",
-    "versioncode" : 110,
-    "versionname" : "1.1.0",
+    "versioncode" : 120,
+    "versionname" : "1.2.0",
     "cache_expiration_time" : 300000,
     "default_lang" : "vi",
     "languages": {"vi": "Viet Nam","en" : "English"},
@@ -14,20 +14,23 @@
     "customurlscheme": "moodlemobile",
     "siteurl": [
         {
-            "name" : "Bank Top Learning",
-            "url" : "https://bank.toplearning.vn" 
+            "name" : "Bank",
+            "url" : "https://bank.toplearning.vn"
         },
         {
-            "name" : "Test Site 1",
-            "url" : "https://testsite.net" 
+            "name" : "PNJ",
+            "url" : "https://pnj-mysql.toplearning.vn" 
         },
         {
-            "name" : "Test Site 2",
-            "url" : "https://testsite.net" 
+            "name" : "DLVN",
+            "url" : "https://dlvn.toplearning.vn"
         }
+        
     ],
     "multisitesdisplay": "select",
     "skipssoconfirmation": false,
-    "forcedefaultlanguage": true,
-    "privacypolicy": "https://toplearning.vn"
+    "forcedefaultlanguage": false,
+    "privacypolicy": "https://toplearning.vn",
+    "apisession" : "2785a98d1a9e5dd5dc5bd53f47250f68578059a84c1af5d7deba75bc13a0849c",
+    "apisessionkey" : "GVEKUYZHSDORKZIL"
 }
