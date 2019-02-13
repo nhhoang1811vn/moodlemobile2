@@ -33,7 +33,7 @@ export class AddonCompetencyCourseOptionHandler implements CoreCourseOptionsHand
      * @return {boolean|Promise<boolean>} Whether or not the handler is enabled on a site level.
      */
     isEnabled(): boolean | Promise<boolean> {
-        return true;
+        return false;
     }
 
     /**
@@ -46,6 +46,7 @@ export class AddonCompetencyCourseOptionHandler implements CoreCourseOptionsHand
      * @return {boolean|Promise<boolean>} True or promise resolved with true if enabled.
      */
     isEnabledForCourse(courseId: number, accessData: any, navOptions?: any, admOptions?: any): boolean | Promise<boolean> {
+        return false;
         if (accessData && accessData.type == CoreCourseProvider.ACCESS_GUEST) {
             return false; // Not enabled for guests.
         }

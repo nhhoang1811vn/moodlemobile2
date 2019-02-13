@@ -1,0 +1,12 @@
+ion-app.app-root addon-block-timeline {
+    ion-item-divider{
+        background: $core-color-light;
+        color: white;
+        ion-icon{
+            color: white !important;
+        }
+        h2{
+            font-weight: bold;
+        }
+    }
+}

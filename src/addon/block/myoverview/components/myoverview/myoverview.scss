@@ -1,0 +1,13 @@
+ion-app.app-root addon-block-myoverview {
+    ion-item-divider{
+        margin-top: 8px;
+        background: $core-color-light;
+        color: white;
+        ion-icon{
+            color: white !important;
+        }
+        h2{
+            font-weight: bold;
+        }
+    }
+}
