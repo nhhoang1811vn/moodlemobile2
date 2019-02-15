@@ -13,18 +13,18 @@
 // limitations under the License.
 
 import { Injectable } from '@angular/core';
-import { AddonFilesProvider } from './files';
+
 import { CoreMainMenuHandler, CoreMainMenuHandlerData } from '@core/mainmenu/providers/delegate';
 
 /**
  * Handler to inject an option into main menu.
  */
 @Injectable()
-export class AddonFilesMainMenuHandler implements CoreMainMenuHandler {
-    name = 'AddonFiles';
-    priority = 40;
+export class OnlineCourseMainMenuHandler implements CoreMainMenuHandler {
+    name = 'CustomOnlineCourse';
+    priority = 190;
 
-    constructor(private filesProvider: AddonFilesProvider) { }
+    constructor() { }
 
     /**
      * Check if the handler is enabled on a site level.
@@ -32,7 +32,7 @@ export class AddonFilesMainMenuHandler implements CoreMainMenuHandler {
      * @return {boolean} Whether or not the handler is enabled on a site level.
      */
     isEnabled(): boolean | Promise<boolean> {
-        return this.filesProvider.isPluginEnabled();
+        return true;
     }
 
     /**
@@ -42,10 +42,10 @@ export class AddonFilesMainMenuHandler implements CoreMainMenuHandler {
      */
     getDisplayData(): CoreMainMenuHandlerData {
         return {
-            icon: 'folder',
-            title: 'addon.files.files',
-            page: 'AddonFilesListPage',
-            class: 'addon-files-handler'
+            icon: 'laptop',
+            title: 'custom.menuitem.online',
+            page: 'OnlineCoursePage',
+            class: 'online-course-hanler'
         };
     }
 }

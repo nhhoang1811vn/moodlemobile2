@@ -22,7 +22,7 @@ import { CoreMainMenuHandler, CoreMainMenuHandlerData } from '@core/mainmenu/pro
 @Injectable()
 export class AddonCompetencyMainMenuHandler implements CoreMainMenuHandler  {
     name = 'AddonCompetency';
-    priority = 500;
+    priority = 50;
 
     constructor(private competencyProvider: AddonCompetencyProvider) { }
 

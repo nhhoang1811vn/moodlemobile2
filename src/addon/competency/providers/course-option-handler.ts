@@ -47,7 +47,7 @@ export class AddonCompetencyCourseOptionHandler implements CoreCourseOptionsHand
      */
     isEnabledForCourse(courseId: number, accessData: any, navOptions?: any, admOptions?: any): boolean | Promise<boolean> {
         return false;
-        if (accessData && accessData.type == CoreCourseProvider.ACCESS_GUEST) {
+        /*if (accessData && accessData.type == CoreCourseProvider.ACCESS_GUEST) {
             return false; // Not enabled for guests.
         }
 
@@ -57,7 +57,7 @@ export class AddonCompetencyCourseOptionHandler implements CoreCourseOptionsHand
 
         return this.competencyProvider.isPluginForCourseEnabled(courseId).then((competencies) => {
             return competencies ? !competencies.canmanagecoursecompetencies : false;
-        });
+        });*/
     }
 
     /**

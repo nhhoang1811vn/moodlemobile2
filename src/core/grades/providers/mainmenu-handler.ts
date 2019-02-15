@@ -22,7 +22,7 @@ import { CoreMainMenuHandler, CoreMainMenuHandlerData } from '@core/mainmenu/pro
 @Injectable()
 export class CoreGradesMainMenuHandler implements CoreMainMenuHandler {
     name = 'CoreGrades';
-    priority = 600;
+    priority = 180;
 
     constructor(private gradesProvider: CoreGradesProvider) { }
 

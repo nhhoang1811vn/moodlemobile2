@@ -25,7 +25,7 @@ import { AddonBlockTimelineProvider } from '@addon/block/timeline/providers/time
 @Injectable()
 export class CoreDashboardMainMenuHandler implements CoreMainMenuHandler {
     name = 'CoreDashboard'; // Old name CoreCourses cannot be used because it would be all disabled by site.
-    priority = 1100;
+    priority = 200;
 
     constructor(private coursesProvider: CoreCoursesProvider, private dashboardProvider: CoreCoursesDashboardProvider,
         private siteHomeProvider: CoreSiteHomeProvider, private timelineProvider: AddonBlockTimelineProvider) { }

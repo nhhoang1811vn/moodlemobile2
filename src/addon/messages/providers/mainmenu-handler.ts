@@ -32,7 +32,7 @@ import { CoreEmulatorHelperProvider } from '@core/emulator/providers/helper';
 @Injectable()
 export class AddonMessagesMainMenuHandler implements CoreMainMenuHandler, CoreCronHandler {
     name = 'AddonMessages';
-    priority = 800;
+    priority = 30;
     protected handler: CoreMainMenuHandlerToDisplay = {
         icon: 'chatbubbles',
         title: 'addon.messages.messages',

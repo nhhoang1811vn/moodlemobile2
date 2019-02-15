@@ -27,7 +27,7 @@ import { AddonPushNotificationsDelegate } from '@addon/pushnotifications/provide
 @Injectable()
 export class AddonNotificationsMainMenuHandler implements CoreMainMenuHandler {
     name = 'AddonNotifications';
-    priority = 700;
+    priority = 170;
 
     protected handler: CoreMainMenuHandlerData = {
         icon: 'notifications',

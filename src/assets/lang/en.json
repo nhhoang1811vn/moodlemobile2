@@ -1005,7 +1005,7 @@
     "core.courses.frontpage": "Front page",
     "core.courses.hidecourse": "Hide from view",
     "core.courses.mycourses": "My courses",
-    "core.courses.mymoodle": "Home page",
+    "core.courses.mymoodle": "Home",
     "core.courses.nocourses": "No course information to show.",
     "core.courses.nocoursesyet": "No courses in this category",
     "core.courses.nosearchresults": "No results",
@@ -1499,5 +1499,7 @@
     "custom.e-learning" : "E-Learning",
     "custom.login.passwordforgotteninstructions1" : "To get password, please input username or email in the below",
     "custom.login.usernameoremail" : "Username/email",
-    "custom.login.send" : "Send"
+    "custom.login.send" : "Send",
+
+    "custom.menuitem.online" : "Online"
 }
