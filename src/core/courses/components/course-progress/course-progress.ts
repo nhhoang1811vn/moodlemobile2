@@ -259,4 +259,11 @@ export class CoreCoursesCourseProgressComponent implements OnInit, OnDestroy {
         this.siteUpdatedObserver && this.siteUpdatedObserver.off();
         this.courseStatusObserver && this.courseStatusObserver.off();
     }
+    getDateTime(timeInMilis : any) : string{
+        let date=new Date(timeInMilis*1000);  
+        return (date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear());
+    }
+    showEndDate(course: any) : Boolean{
+        return (course.enddate != 0)
+    }
 }

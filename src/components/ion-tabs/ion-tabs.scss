@@ -1,7 +1,7 @@
 ion-app.app-root core-ion-tabs {
     .tabbar {
         z-index: 101; // For some reason, the regular z-index isn't enough with our tabs, use a higher one.
-
+        background: #F5F5F5;
         .core-ion-tabs-loading {
             width: 100%;
             display: table;
@@ -16,6 +16,18 @@ ion-app.app-root core-ion-tabs {
                 }
             }
         }
+        .tab-button[aria-selected=false]{
+            color:#909090;
+        }
+        .tab-button[aria-selected=false] .tab-button-icon{
+            color:#909090;
+        }
+        // .tab-button[aria-selected=true]{
+        //     color:#f98012 ;
+        // }
+        // .tab-button[aria-selected=true] .tab-button-icon{
+        //     color:#f98012;
+        // }
     }
 
     .tab-badge.badge {

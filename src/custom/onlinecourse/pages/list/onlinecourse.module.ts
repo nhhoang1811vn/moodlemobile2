@@ -10,11 +10,13 @@ import { CoreCoursesComponentsModule } from '@core/courses/components/components
 //import { CustomComponentsModule } from 'custom/onlinecourse/components/components.module';
 import {CustomComponentsModule} from '../../components/components.module';
 import { IonicImageLoader } from 'ionic-image-loader';
+import { AddonBlockMyOverviewComponentsModule } from '@addon/block/myoverview/components/components.module';
+
 
 
 @NgModule({
   declarations: [
-    OnlineCoursePage  
+    OnlineCoursePage 
     ],
   imports: [
     CoreComponentsModule,
@@ -24,7 +26,10 @@ import { IonicImageLoader } from 'ionic-image-loader';
     CustomComponentsModule,
     IonicPageModule.forChild(OnlineCoursePage),
     TranslateModule.forChild(),
-    IonicImageLoader
+    IonicImageLoader,
+    AddonBlockMyOverviewComponentsModule
+    
+    
     
   ],
 })

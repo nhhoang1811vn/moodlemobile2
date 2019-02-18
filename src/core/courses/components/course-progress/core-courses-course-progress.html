@@ -10,6 +10,15 @@
                 <core-format-text [text]="course.fullname"></core-format-text>
             </h2>
         </div>
+        <div class="core-course-time">
+            <ion-icon name="time"></ion-icon>
+            <span class="date-display">{{getDateTime(course.startdate)}}</span>
+            <ion-icon name="arrow-round-forward" *ngIf = "showEndDate(course)"></ion-icon>
+            <span class="date-display" *ngIf = "showEndDate(course)" >{{getDateTime(course.enddate)}}</span>
+            <ion-icon name="person"></ion-icon>
+            <span>{{course.enrolledusercount}}</span>
+        </div>
+        
 
         <div class="core-button-spinner" *ngIf="downloadCourseEnabled && !courseOptionMenuEnabled && showDownload">
             <!-- Download course. -->

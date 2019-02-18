@@ -120,7 +120,7 @@ export class AddonBlockMyOverviewComponent extends CoreBlockBaseComponent implem
      *
      * @return {Promise<any>} Resolved when done.
      */
-    protected invalidateContent(): Promise<any> {
+    public invalidateContent(): Promise<any> {
         const promises = [];
 
         promises.push(this.coursesProvider.invalidateUserCourses().finally(() => {

@@ -40,7 +40,20 @@ ion-app.app-root core-courses-course-progress {
                 justify-content: space-between;
                 flex-wrap: wrap;
             }
+            .core-course-time{
+                .date-display{
+                    font-style: italic;
+                }
+                ion-icon{
+                    margin-right: 4px;
+                }
+                span{
+                    margin-right: 4px;
+                    font-size: 1.4rem;
+                }
+            }
             .core-course-title {
+                width: 100%;
                 margin: 5px 0;
                 flex-grow: 1;
                 max-width: calc(100% - 5px);
@@ -48,6 +61,11 @@ ion-app.app-root core-courses-course-progress {
                 h2 ion-icon {
                     margin-right: 4px;
                     color: $core-star-color;
+                    
+                }
+                h2 core-format-text{
+                    font-size: 1.7rem;
+                    font-weight: bold;
                 }
 
                 &.core-course-with-buttons {
