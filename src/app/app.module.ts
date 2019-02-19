@@ -123,7 +123,6 @@ import { AddonNotificationsModule } from '@addon/notifications/notifications.mod
 import { AddonRemoteThemesModule } from '@addon/remotethemes/remotethemes.module';
 import { AddonQbehaviourModule } from '@addon/qbehaviour/qbehaviour.module';
 import { AddonQtypeModule } from '@addon/qtype/qtype.module';
-import { IonicImageLoader } from 'ionic-image-loader';
 import { CustomApi } from '../providers/custom-api/custom-api';
 import { OnlineCourseModule } from '../custom/onlinecourse/onlinecourse.module';
 
@@ -243,9 +242,7 @@ export const CORE_PROVIDERS: any[] = [
         AddonRemoteThemesModule,
         AddonQbehaviourModule,
         AddonQtypeModule,
-        OnlineCourseModule,
-
-        IonicImageLoader.forRoot()
+        OnlineCourseModule
         //custom
         //OnlineCoursePageModule
     ],

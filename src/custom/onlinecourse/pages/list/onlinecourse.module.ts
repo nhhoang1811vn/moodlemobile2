@@ -9,7 +9,6 @@ import { CoreSiteHomeComponentsModule } from '@core/sitehome/components/componen
 import { CoreCoursesComponentsModule } from '@core/courses/components/components.module';
 //import { CustomComponentsModule } from 'custom/onlinecourse/components/components.module';
 import {CustomComponentsModule} from '../../components/components.module';
-import { IonicImageLoader } from 'ionic-image-loader';
 import { AddonBlockMyOverviewComponentsModule } from '@addon/block/myoverview/components/components.module';
 
 
@@ -26,7 +25,6 @@ import { AddonBlockMyOverviewComponentsModule } from '@addon/block/myoverview/co
     CustomComponentsModule,
     IonicPageModule.forChild(OnlineCoursePage),
     TranslateModule.forChild(),
-    IonicImageLoader,
     AddonBlockMyOverviewComponentsModule
     
     

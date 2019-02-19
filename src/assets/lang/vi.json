@@ -675,7 +675,7 @@
     "addon.mod_scorm.completed": "Đã hoàn thành",
     "addon.mod_scorm.contents": "Nội dung",
     "addon.mod_scorm.dataattemptshown": "Dữ liệu này thuộc về lần thử thứ {{number}}.",
-    "addon.mod_scorm.enter": "Nhập",
+    "addon.mod_scorm.enter": "Vào",
     "addon.mod_scorm.errorcreateofflineattempt": "Có lỗi xảy ra khi tạo một lần thử ngoại tuyến mới, thử lại sau.",
     "addon.mod_scorm.errordownloadscorm": "Lỗi khi tải SCORM: \"{{name}}\".",
     "addon.mod_scorm.errorgetscorm": "Lỗi khi lấy dữ liệu SCORM.",

@@ -1,6 +1,6 @@
 <ion-card [attr.course-color]="course.id % 10">
     <div (click)="openCourse(course)" class="core-course-thumb">
-        <img-loader src="{{course.image}}"></img-loader>        
+        <img src="{{course.image}}">
     </div>
     <ion-item tappable text-wrap detail-none (click)="openCourse(course)" [title]="course.displayname || course.fullname" class="core-course-link" [class.item-disabled]="course.visible == 0" [class.core-course-more-than-title]="(course.progress != null && course.progress >= 0)">
         <div class="core-course-title" [class.core-course-with-buttons]="courseOptionMenuEnabled || (downloadCourseEnabled && showDownload)">

@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header *ngIf = "!enableExpand">
     <ion-navbar core-back-button>
         <ion-title><core-format-text [text]="title"></core-format-text></ion-title>
 
@@ -10,10 +10,17 @@
         </ion-buttons>
     </ion-navbar>
 </ion-header>
-<ion-content>
+<ion-content fullscreen="enableExpand">
+        <button ion-button icon-only (click) = "toggleFullMode()" *ngIf="!enableExpand" class="iconExpandCollapse">
+            <ion-icon name="expand"></ion-icon>
+        </button>
+        <button ion-button icon-only (click) = "toggleFullMode()" *ngIf="enableExpand" class="iconExpandCollapse">
+            <ion-icon name="contract"></ion-icon>
+        </button>
     <core-loading [hideUntil]="loaded">
         <core-navigation-bar [previous]="previousSco" [next]="nextSco" (action)="loadSco($event)"></core-navigation-bar>
-        <core-iframe *ngIf="loaded && src" [src]="src" [iframeWidth]="scorm.popup ? scorm.width : undefined" [iframeHeight]="scorm.popup ? scorm.height : undefined"></core-iframe>
+        <!-- <core-iframe *ngIf="loaded && src" [src]="src" [iframeWidth]="scorm.popup ? scorm.width : undefined" [iframeHeight]="scorm.popup ? scorm.height : undefined"></core-iframe> -->
+        <core-iframe *ngIf="loaded && src" [src]="src"></core-iframe>
         <p *ngIf="!src && errorMessage">{{ errorMessage | translate }}</p>
     </core-loading>
 </ion-content>

@@ -37,7 +37,11 @@ export class MoodleMobileApp implements OnInit {
     constructor(private platform: Platform, statusBar: StatusBar, logger: CoreLoggerProvider, keyboard: Keyboard,
             private eventsProvider: CoreEventsProvider, private loginHelper: CoreLoginHelperProvider, private zone: NgZone,
             private appProvider: CoreAppProvider, private langProvider: CoreLangProvider, private sitesProvider: CoreSitesProvider,
-            private screenOrientation: ScreenOrientation, app: IonicApp) {
+            private screenOrientation: ScreenOrientation, app: IonicApp
+            ) {
+                
+
+
         this.logger = logger.getInstance('AppComponent');
 
         platform.ready().then(() => {

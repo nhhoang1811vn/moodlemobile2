@@ -1,7 +1,10 @@
 ion-app.app-root page-addon-mod-scorm-player {
-    .icon-full-mode{
+    .iconExpandCollapse{
         position: absolute;
-        top: 16px;
-        left: 16px;
+        top: 32px;
+        right: 32px;
+        background: orange;
+        color: white;
+        opacity: 0.5;
     }
 }

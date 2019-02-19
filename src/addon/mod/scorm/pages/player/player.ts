@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { IonicPage, NavParams, PopoverController } from 'ionic-angular';
+import { Component, OnInit, OnDestroy, ViewChildren, ViewChild } from '@angular/core';
+import { IonicPage, NavParams, PopoverController, Content } from 'ionic-angular';
 import { CoreEventsProvider } from '@providers/events';
 import { CoreSitesProvider } from '@providers/sites';
 import { CoreSyncProvider } from '@providers/sync';
@@ -24,6 +24,7 @@ import { AddonModScormHelperProvider } from '../../providers/helper';
 import { AddonModScormSyncProvider } from '../../providers/scorm-sync';
 import { AddonModScormDataModel12 } from '../../classes/data-model-12';
 import { AddonModScormTocPopoverComponent } from '../../components/toc-popover/toc-popover';
+import * as $ from 'jquery'
 
 /**
  * Page that allows playing a SCORM.
@@ -34,7 +35,7 @@ import { AddonModScormTocPopoverComponent } from '../../components/toc-popover/t
     templateUrl: 'player.html',
 })
 export class AddonModScormPlayerPage implements OnInit, OnDestroy {
-
+    @ViewChild('scroll') scroll: any;
     title: string; // Title.
     scorm: any; // The SCORM object.
     showToc: boolean; // Whether to show the table of contents (TOC).
@@ -63,6 +64,8 @@ export class AddonModScormPlayerPage implements OnInit, OnDestroy {
     protected launchNextObserver: any;
     protected launchPrevObserver: any;
     protected goOfflineObserver: any;
+
+    protected enableExpand = false;
 
     constructor(navParams: NavParams, protected popoverCtrl: PopoverController, protected eventsProvider: CoreEventsProvider,
             protected sitesProvider: CoreSitesProvider, protected syncProvider: CoreSyncProvider,
@@ -446,5 +449,21 @@ export class AddonModScormPlayerPage implements OnInit, OnDestroy {
 
         // Unblock the SCORM so it can be synced.
         this.syncProvider.unblockOperation(AddonModScormProvider.COMPONENT, this.scorm.id, 'player');
+    }
+    toggleFullMode(){
+        //let scrollContent = <HTMLElement>document.getElementsByTagName('scroll-content').item(document.getElementsByTagName('scroll-content').length -1);
+        this.enableExpand = !this.enableExpand;
+        //this.scroll.scrollElement.
+        let scrollContent = (document.querySelector("ion-app.app-root page-addon-mod-scorm-player .scroll-content") as HTMLElement);
+        let bottomMenu = (document.querySelector("ion-app.app-root .tabbar") as HTMLElement);
+        if (this.enableExpand){
+            scrollContent.style.marginTop = "0px";
+            scrollContent.style.marginBottom = "0px";
+            bottomMenu.style.display = "none";
+        }else{
+            scrollContent.style.marginTop = "56px";
+            scrollContent.style.marginBottom = "65px";
+            bottomMenu.style.display = "flex";
+        }
     }
 }

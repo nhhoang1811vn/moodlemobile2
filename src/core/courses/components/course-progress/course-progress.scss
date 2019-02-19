@@ -23,6 +23,13 @@ ion-app.app-root core-courses-course-progress {
                 margin: auto; 
                 background-size: cover !important;             
             }
+            img{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto; 
+                background-size: cover !important;  
+            }
         }
 
         .core-course-shortname {
