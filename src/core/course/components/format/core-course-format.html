@@ -72,7 +72,8 @@
     <section ion-list *ngIf="!section.hiddenbynumsections && section.id != allSectionsId && section.id != stealthModulesSectionId">
         <!-- Title is only displayed when viewing all sections. -->
         <ion-item-divider text-wrap color="light" *ngIf="selectedSection.id == allSectionsId && section.name">
-            <core-format-text [text]="section.name"></core-format-text>
+            <core-format-text [text]="getTitleSectionName(section.name)"></core-format-text>
+            
             <!-- Section download. -->
             <ng-container *ngTemplateOutlet="sectionDownloadTemplate; context: {section: section}"></ng-container>
         </ion-item-divider>

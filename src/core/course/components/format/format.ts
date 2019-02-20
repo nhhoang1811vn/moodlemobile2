@@ -461,4 +461,10 @@ export class CoreCourseFormatComponent implements OnInit, OnChanges, OnDestroy {
         return section.uservisible !== false && !section.hiddenbynumsections &&
                 section.id != CoreCourseProvider.STEALTH_MODULES_SECTION_ID;
     }
+    getTitleSectionName(sectionName : string) : string{
+        if (sectionName == 'General'){
+            return 'Các hoạt động';
+        }
+        return sectionName;
+    }
 }

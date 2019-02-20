@@ -455,15 +455,18 @@ export class AddonModScormPlayerPage implements OnInit, OnDestroy {
         this.enableExpand = !this.enableExpand;
         //this.scroll.scrollElement.
         let scrollContent = (document.querySelector("ion-app.app-root page-addon-mod-scorm-player .scroll-content") as HTMLElement);
+        let header = (document.querySelector("ion-app.app-root page-addon-mod-scorm-player .header") as HTMLElement);
         let bottomMenu = (document.querySelector("ion-app.app-root .tabbar") as HTMLElement);
         if (this.enableExpand){
             scrollContent.style.marginTop = "0px";
             scrollContent.style.marginBottom = "0px";
             bottomMenu.style.display = "none";
+            header.style.display = "none";
         }else{
             scrollContent.style.marginTop = "56px";
             scrollContent.style.marginBottom = "65px";
             bottomMenu.style.display = "flex";
+            header.style.display = "block";
         }
     }
 }

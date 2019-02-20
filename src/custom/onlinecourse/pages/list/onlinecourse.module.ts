@@ -7,8 +7,6 @@ import { CoreDirectivesModule } from '@directives/directives.module';
 
 import { CoreSiteHomeComponentsModule } from '@core/sitehome/components/components.module';
 import { CoreCoursesComponentsModule } from '@core/courses/components/components.module';
-//import { CustomComponentsModule } from 'custom/onlinecourse/components/components.module';
-import {CustomComponentsModule} from '../../components/components.module';
 import { AddonBlockMyOverviewComponentsModule } from '@addon/block/myoverview/components/components.module';
 
 
@@ -22,7 +20,6 @@ import { AddonBlockMyOverviewComponentsModule } from '@addon/block/myoverview/co
     CoreDirectivesModule,
     CoreCoursesComponentsModule,
     CoreSiteHomeComponentsModule,
-    CustomComponentsModule,
     IonicPageModule.forChild(OnlineCoursePage),
     TranslateModule.forChild(),
     AddonBlockMyOverviewComponentsModule

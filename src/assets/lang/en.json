@@ -1161,7 +1161,7 @@
     "core.login.forgotten": "Forgotten your username or password?",
     "core.login.getanothercaptcha": "Get another CAPTCHA",
     "core.login.help": "Help",
-    "core.login.helpmelogin": "<p>There are many thousands of Moodle sites around the world. This app can only connect to Moodle sites that have specifically enabled Mobile app access.</p><p>If you can't connect to your Moodle site then you need to contact your site administrator and ask them to read <a href=\"http://docs.moodle.org/en/Mobile_app\" target=\"_blank\">http://docs.moodle.org/en/Mobile_app</a></p><p>To test the app in a Moodle demo site type <i>teacher</i> or <i>student</i> in the <i>Site address</i> field and click the <b>Connect button</b>.</p>",
+    "core.login.helpmelogin": "<p>Please contact the administrator to set up your system to integrate with the application</p><p>Contact: hungelexpert@gmail.com or detail: <a href = \"https://toplearning.vn\" target = \"_blank \"> https://toplearning.vn </a> </p>",
     "core.login.instructions": "Instructions",
     "core.login.invalidaccount": "Please check your login details or ask your site administrator to check the site configuration.",
     "core.login.invaliddate": "Invalid date",

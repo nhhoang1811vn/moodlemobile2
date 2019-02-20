@@ -1,4 +1,4 @@
-<ion-header *ngIf = "!enableExpand">
+<ion-header>
     <ion-navbar core-back-button>
         <ion-title><core-format-text [text]="title"></core-format-text></ion-title>
 
@@ -11,10 +11,10 @@
     </ion-navbar>
 </ion-header>
 <ion-content fullscreen="enableExpand">
-        <button ion-button icon-only (click) = "toggleFullMode()" *ngIf="!enableExpand" class="iconExpandCollapse">
+        <button ion-button icon-only (click) = "toggleFullMode()" *ngIf="!enableExpand" class="iconExpandCollapse" small>
             <ion-icon name="expand"></ion-icon>
         </button>
-        <button ion-button icon-only (click) = "toggleFullMode()" *ngIf="enableExpand" class="iconExpandCollapse">
+        <button ion-button icon-only (click) = "toggleFullMode()" *ngIf="enableExpand" class="iconExpandCollapse" small>
             <ion-icon name="contract"></ion-icon>
         </button>
     <core-loading [hideUntil]="loaded">
