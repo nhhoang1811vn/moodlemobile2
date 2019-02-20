@@ -48,14 +48,24 @@ ion-app.app-root core-courses-course-progress {
                 flex-wrap: wrap;
             }
             .core-course-time{
+                display: table;
+                .icon-time{
+                    color : #f98012;
+                }
+                
+                *{
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 4px 8px 4px 0px;
+                }
                 .date-display{
                     font-style: italic;
                 }
                 ion-icon{
-                    margin-right: 4px;
+                    font-size: 1.3em;
                 }
+                
                 span{
-                    margin-right: 4px;
                     font-size: 1.4rem;
                 }
             }

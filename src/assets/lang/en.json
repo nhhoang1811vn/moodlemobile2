@@ -1501,5 +1501,22 @@
     "custom.login.usernameoremail" : "Username/email",
     "custom.login.send" : "Send",
 
-    "custom.menuitem.online" : "Online"
+    "custom.menuitem.online" : "Online",
+
+    "custom.onlinecourse.title" : "Online course",
+
+    "custom.menuitem.mycourse": "My course",
+    "custom.menuitem.notification" : "Notification(3)",
+    "custom.menuitem.forum": "Forum",
+    "custom.menuitem.survey": "Survey",
+    "custom.menuitem.library" : "Library", 
+    "custom.menuitem.news" : "News",
+    "custom.menuitem.onlinecourse" : "Online course",
+    "custom.menuitem.offlinecourse" : "Offline course",
+    "custom.menuitem.contest" : "Contest",
+    "custom.menuitem.dashboard" : "Dashboard",
+    "custom.menuitem.actionplans" : "Action plan",
+    "custom.menuitem.evaluactionplans" : "Evalute action plan",
+    "custom.menuitem.about" : "About account",
+    "custom.menuitem.logout" : "Logout"
 }

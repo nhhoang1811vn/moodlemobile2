@@ -837,7 +837,7 @@
     "addon.notifications.markallread": "Đánh dấu tất cả là đã đọc",
     "addon.notifications.notificationpreferences": "Tùy chọn thông báo",
     "addon.notifications.playsound": "Chơi nhạc",
-    "addon.notifications.therearentnotificationsyet": "Không có ",
+    "addon.notifications.therearentnotificationsyet": "Không có thông báo",
 
     "assets.countries.vi": "Tiếng Việt",
     "assets.countries.en": "Tiếng Anh",
@@ -1414,5 +1414,21 @@
     "custom.login.passwordforgotteninstructions1" : "Để lấy lại mật khẩu, vui lòng nhập tên đăng nhập hoặc email của bạn ở dưới",
     "custom.login.usernameoremail" : "Tên đăng nhập/email",
     "custom.login.send" : "Gửi",
-    "custom.menuitem.online" : "Trực tuyến"
+    "custom.menuitem.online" : "Trực tuyến",
+    "custom.onlinecourse.title" : "Khóa học trực tuyến",
+
+    "custom.menuitem.mycourse": "Khóa học của tôi",
+    "custom.menuitem.notification" : "Thông báo (3)",
+    "custom.menuitem.forum": "Diễn đàn",
+    "custom.menuitem.survey": "Khảo sát",
+    "custom.menuitem.library" : "Thư viện", 
+    "custom.menuitem.news" : "Tin tức",
+    "custom.menuitem.onlinecourse" : "Khóa học trực tuyến",
+    "custom.menuitem.offlinecourse" : "Khóa học tập trung",
+    "custom.menuitem.contest" : "Kỳ thi",
+    "custom.menuitem.dashboard" : "Bảng điều khiển",
+    "custom.menuitem.actionplans" : "Kế hoạch hành động",
+    "custom.menuitem.evaluactionplans" : "Đánh giá kế hoạch hành động",
+    "custom.menuitem.about" : "Thông tin tài khoản",
+    "custom.menuitem.logout" : "Đăng xuất"
 }

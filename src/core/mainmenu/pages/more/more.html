@@ -1,19 +1,75 @@
 <ion-header>
-    <ion-navbar core-back-button>
-        <ion-title><core-format-text [text]="siteInfo.sitename"></core-format-text></ion-title>
+    <ion-navbar>
+        <ion-item core-user-link id="ion-item-header">
+            <ion-avatar core-user-avatar [user]="siteInfo" item-start></ion-avatar>
+            <p>{{siteInfo.fullname}}</p>
+        </ion-item>
     </ion-navbar>
 </ion-header>
 <ion-content>
     <ion-list>
-        <a ion-item core-user-link [userId]="siteInfo.userid">
+        <!-- <a ion-item core-user-link [userId]="siteInfo.userid">
             <ion-avatar core-user-avatar [user]="siteInfo" item-start></ion-avatar>
             <p>{{siteInfo.fullname}}</p>
         </a>
         <ion-item-divider></ion-item-divider>
         <ion-item text-center *ngIf="(!handlers || !handlers.length) && !handlersLoaded">
             <ion-spinner></ion-spinner>
-        </ion-item>
-        <a ion-item *ngFor="let handler of handlers" [ngClass]="['core-moremenu-handler', handler.class]" (click)="openHandler(handler)" title="{{ handler.title | translate }}" detail-push>
+        </ion-item> -->
+
+        <a ion-item class="under-contruction">
+            <ion-icon name="folder-open" item-start></ion-icon>
+            <p>{{'custom.menuitem.mycourse' | translate}}</p>
+        </a>
+        <a ion-item class="under-contruction">
+                <ion-icon name="notifications-outline" item-start></ion-icon>
+                <p>{{'custom.menuitem.notification' | translate}}</p>
+            </a>
+        <a ion-item class="under-contruction">
+            <ion-icon name="chatboxes" item-start></ion-icon>
+            <p>{{'custom.menuitem.forum' | translate}}</p>
+        </a>
+        <a ion-item class="under-contruction">
+            <ion-icon name="help" item-start></ion-icon>
+            <p>{{'custom.menuitem.survey' | translate}}</p>
+        </a>
+        <a ion-item class="under-contruction">
+            <ion-icon name="bookmarks" item-start></ion-icon>
+            <p>{{'custom.menuitem.library' | translate}}</p>
+        </a>
+        <a ion-item class="under-contruction">
+            <ion-icon name="paper" item-start></ion-icon>
+            <p>{{'custom.menuitem.news' | translate}}</p>
+        </a>
+        <a ion-item class="under-contruction">
+            <ion-icon name="laptop" item-start></ion-icon>
+            <p>{{'custom.menuitem.onlinecourse' | translate}}</p>
+        </a>
+        <a ion-item class="under-contruction">
+            <ion-icon name="laptop" item-start></ion-icon>
+            <p>{{'custom.menuitem.offlinecourse' | translate}}</p>
+        </a>
+        <a ion-item class="under-contruction">
+            <ion-icon name="list-box" item-start></ion-icon>
+            <p>{{'custom.menuitem.contest' | translate}}</p>
+        </a>
+        <a ion-item class="under-contruction">
+            <ion-icon name="analytics" item-start></ion-icon>
+            <p>{{'custom.menuitem.dashboard' | translate}}</p>
+        </a>
+        <a ion-item class="under-contruction">
+            <ion-icon name="browsers" item-start></ion-icon>
+            <p>{{'custom.menuitem.actionplans' | translate}}</p>
+        </a>
+        <a ion-item class="under-contruction">
+            <ion-icon name="browsers" item-start></ion-icon>
+            <p>{{'custom.menuitem.evaluactionplans' | translate}}</p>
+        </a>
+        <a ion-item core-user-link [userId]="siteInfo.userid">
+            <ion-icon name="contact" item-start ></ion-icon>
+            <p>{{'custom.menuitem.about' | translate}}</p>
+        </a>
+        <!-- <a ion-item *ngFor="let handler of handlers" [ngClass]="['core-moremenu-handler', handler.class]" (click)="openHandler(handler)" title="{{ handler.title | translate }}" detail-push>
             <core-icon [name]="handler.icon" item-start></core-icon>
             <p>{{ handler.title | translate}}</p>
             <ion-badge item-end *ngIf="handler.showBadge" [hidden]="handler.loading || !handler.badge">{{handler.badge}}</ion-badge>
@@ -28,15 +84,15 @@
                 <core-icon [name]="item.icon" item-start></core-icon>
                 <p>{{item.label}}</p>
             </a>
-        </div>
-        <a *ngIf="showWeb" ion-item [href]="siteInfo.siteurl" core-link autoLogin="yes" title="{{ 'core.mainmenu.website' | translate }}">
+        </div> -->
+        <!-- <a *ngIf="showWeb" ion-item [href]="siteInfo.siteurl" core-link autoLogin="yes" title="{{ 'core.mainmenu.website' | translate }}">
             <ion-icon name="globe" item-start></ion-icon>
             <p>{{ 'core.mainmenu.website' | translate }}</p>
         </a>
         <a *ngIf="showHelp" ion-item [href]="docsUrl" core-link autoLogin="no" title="{{ 'core.mainmenu.help' | translate }}">
             <ion-icon name="help-buoy" item-start></ion-icon>
             <p>{{ 'core.mainmenu.help' | translate }}</p>
-        </a>
+        </a> -->
         <a ion-item (click)="openSettings()" title="{{ 'core.mainmenu.appsettings' | translate }}">
             <ion-icon name="cog" item-start></ion-icon>
             <p>{{ 'core.mainmenu.appsettings' | translate }}</p>

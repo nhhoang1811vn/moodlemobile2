@@ -1,18 +1,25 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Khóa học trực tuyến (under construction)</ion-title>
+    <ion-title>{{'custom.onlinecourse.title' | translate}}</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
-    <!-- <ion-refresher [enabled]="courses.loaded" (ionRefresh)="refreshMyOverview($event)">
-        <ion-refresher-content pullingText="{{ 'core.pulltorefresh' | translate }}"></ion-refresher-content> 
-         <addon-block-myoverview></addon-block-myoverview> 
-    </ion-refresher> -->
-    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshDashboard($event)">
-        <ion-refresher-content pullingText="{{ 'core.pulltorefresh' | translate }}"></ion-refresher-content>
-    </ion-refresher>
+    <ion-refresher [enabled]="loaded" (ionRefresh)="loadCourses($event)">
+            <ion-refresher-content pullingText="{{ 'core.pulltorefresh' | translate }}"></ion-refresher-content>
+        </ion-refresher>
     <core-loading [hideUntil]="loaded" class="core-loading-center">
-        <addon-block-myoverview></addon-block-myoverview> 
+            
+        <core-empty-box *ngIf="courses!=null && courses.length == 0" image="assets/img/icons/courses.svg" [message]="'addon.block_myoverview.nocourses' | translate"></core-empty-box>
+        <!-- List of courses. -->
+        <div class="safe-area-page">
+            <ion-grid no-padding>
+                <ion-row no-padding>
+                    <ion-col *ngFor="let course of courses" no-padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 align-self-stretch>
+                        <core-courses-course-progress [course]="course" class="core-courseoverview" showAll="true" [showDownload]="downloadEnabled"></core-courses-course-progress>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
     </core-loading>
     
 </ion-content>

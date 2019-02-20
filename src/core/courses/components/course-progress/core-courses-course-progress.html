@@ -11,7 +11,7 @@
             </h2>
         </div>
         <div class="core-course-time">
-            <ion-icon name="time"></ion-icon>
+            <ion-icon class="icon-time"  name="time"></ion-icon>
             <span class="date-display">{{getDateTime(course.startdate)}}</span>
             <ion-icon name="arrow-round-forward" *ngIf = "showEndDate(course)"></ion-icon>
             <span class="date-display" *ngIf = "showEndDate(course)" >{{getDateTime(course.enddate)}}</span>

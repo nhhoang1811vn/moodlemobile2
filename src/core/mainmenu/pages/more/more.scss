@@ -15,32 +15,27 @@ ion-app.app-root page-core-mainmenu-more {
     $core-more-color-ios: $list-ios-text-color!default;
     $core-more-color-md: $list-md-text-color !default;
     $core-more-color-wp: $item-wp-body-text-color !default;
+    a >.item-inner >.input-wrapper >ion-label >p{
+        color: black;
+        font-size: 1.5rem;
+    }
+    a.under-contruction >.item-inner >.input-wrapper >ion-label >p{
+        color: gray;    
+    }
 
     .item-block {
-        &.item-ios {
-            background-color: $core-more-background-ios;
-            color: $core-more-color-ios;
+        border-bottom: 1px solid grey;
+        background-color: $core-more-background-ios;
+        color: $core-more-color-ios;
 
-            .item-inner {
-                border-bottom: $hairlines-width solid $core-more-border-ios;
-            }
+        .item-inner{
+            border-bottom: none;
+            background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%2020'><path%20d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z'%20fill='%23f98012'/></svg>") !important;
         }
-        &.item-md {
-            background-color: $core-more-background-md;
-            color: $core-more-color-md;
-
-            .item-inner {
-                border-bottom: 1px solid $core-more-border-md;
-            }
+        ion-icon{
+            color: #f98012;
         }
-        &.item-wp {
-            background-color: $core-more-background-wp;
-            color: $core-more-color-wp;
-
-            .item-inner {
-                border-bottom: 1px solid $core-more-border-wp;
-            }
-        }
+        
 
         &.activated {
             &.item-ios {
@@ -49,9 +44,7 @@ ion-app.app-root page-core-mainmenu-more {
             &.item-md {
                 background-color: $core-more-activated-background-md;
             }
-            &.item-wp {
-                background-color: $core-more-activated-background-wp;
-            }
+           
         }
     }
 
@@ -68,9 +61,24 @@ ion-app.app-root page-core-mainmenu-more {
             background-color: $core-more-divider-md;
             border-bottom: $core-more-border-md;
         }
+    }
 
-        &.item-wp {
-            background-color: $core-more-divider-wp;
+    #ion-item-header{
+        border: none;
+        background: none;
+        height: 57px;
+        ion-avatar{
+             margin: 0px !important;
+             
+             padding-right: 8px;
+        }
+        .item-inner{
+            background-image: none !important;
+        }
+        .item-inner > .input-wrapper >ion-label > p{
+            color: white;
+            font-size: 2.0rem;
+            font-weight: bold;
         }
     }
 }
