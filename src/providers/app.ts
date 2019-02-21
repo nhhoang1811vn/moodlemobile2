@@ -21,6 +21,8 @@ import { CoreDbProvider } from './db';
 import { CoreLoggerProvider } from './logger';
 import { CoreEventsProvider } from './events';
 import { SQLiteDB } from '@classes/sqlitedb';
+import {CoreConfigConstants} from '../configconstants'
+
 
 /**
  * Data stored for a redirect to another page/site.
@@ -489,5 +491,8 @@ export class CoreAppProvider {
 
             return index >= 0 && !!this.backActions.splice(index, 1);
         };
+    }
+    isDebug() : boolean{
+        return CoreConfigConstants.enable_debug
     }
 }

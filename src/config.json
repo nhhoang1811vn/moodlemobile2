@@ -32,5 +32,6 @@
     "forcedefaultlanguage": false,
     "privacypolicy": "https://toplearning.vn",
     "apisession" : "2785a98d1a9e5dd5dc5bd53f47250f68578059a84c1af5d7deba75bc13a0849c",
-    "apisessionkey" : "GVEKUYZHSDORKZIL"
+    "apisessionkey" : "GVEKUYZHSDORKZIL",
+    "enable_debug" : true
 }

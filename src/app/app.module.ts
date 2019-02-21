@@ -287,7 +287,7 @@ export const CORE_PROVIDERS: any[] = [
         {provide: COMPILER_OPTIONS, useValue: {}, multi: true},
         {provide: JitCompilerFactory, useClass: JitCompilerFactory, deps: [COMPILER_OPTIONS]},
         {provide: LocationStrategy, useClass: MockLocationStrategy},
-    CustomApi,
+    CustomApi
     ]
 })
 export class AppModule {

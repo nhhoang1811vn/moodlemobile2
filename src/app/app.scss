@@ -28,6 +28,28 @@ ion-app.app-root{
       font-size: 2.2rem;
     }
   }
+  // .scroll-content{
+  //   background: url("../assets/img/bg-login.png") center center;
+  //   background-size: cover;
+  // }
+  a >.item-inner >.input-wrapper >ion-label >p{
+      color: black;
+      font-size: 1.5rem;
+  }
+  a.under-contruction >.item-inner >.input-wrapper >ion-label >p{
+      color: gray;    
+  }
+
+  .item-block {
+      border-bottom: 1px solid #c8c7cc;
+      .item-inner{
+          border-bottom: none;
+          //background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%2020'><path%20d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z'%20fill='%23f98012'/></svg>") !important;
+      }
+  }
+  .item-block > ion-icon{
+    color: #f98012;
+  }
 }
 ion-app.app-root {
   .text-left           { text-align: left; }

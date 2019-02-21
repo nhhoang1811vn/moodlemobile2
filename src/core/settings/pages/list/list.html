@@ -20,7 +20,7 @@
                 <ion-icon name="sync" item-start></ion-icon>
                 <p>{{ 'core.settings.synchronization' | translate }}</p>
             </a>
-            <a ion-item *ngIf="isIOS" (click)="openHandler('CoreSharedFilesListPage', {manage: true})" [title]="'core.sharedfiles.sharedfiles' | translate" [class.core-split-item-selected]="'CoreSharedFilesListPage' == selectedPage" detail-push>
+            <a ion-item  (click)="openHandler('CoreSharedFilesListPage', {manage: true})" [title]="'core.sharedfiles.sharedfiles' | translate" [class.core-split-item-selected]="'CoreSharedFilesListPage' == selectedPage" detail-push>
                 <ion-icon name="folder" item-start></ion-icon>
                 <p>{{ 'core.sharedfiles.sharedfiles' | translate }}</p>
             </a>

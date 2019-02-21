@@ -26,6 +26,7 @@ import { CoreContentLinksHelperProvider } from '@core/contentlinks/providers/hel
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
+
 /**
  * Page to enter the user credentials.
  */
@@ -67,10 +68,13 @@ export class CoreLoginCredentialsPage {
             username: [navParams.get('username') || '', Validators.required],
             password: ['', Validators.required]
         });                
-        // this.credForm = fb.group({
-        //     username: 'Demo3',
-        //     password: 'Abcd@454647'
-        // })    
+         
+       if (appProvider.isDebug()){
+        this.credForm = fb.group({
+            username: 'Demo3',
+            password: 'Abc@12334'
+        });
+       }
     }
 
     /**
