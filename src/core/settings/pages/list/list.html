@@ -7,7 +7,7 @@
 </ion-header>
 <core-split-view>
     <ion-content>
-        <ion-list>
+        <ion-list id="ion-list-setting-options">
             <a ion-item (click)="openHandler('CoreSettingsGeneralPage')" [title]="'core.settings.general' | translate"  [class.core-split-item-selected]="'CoreSettingsGeneralPage' == selectedPage" detail-push>
                 <ion-icon name="construct" item-start></ion-icon>
                 <p>{{ 'core.settings.general' | translate }}</p>

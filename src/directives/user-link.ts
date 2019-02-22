@@ -24,7 +24,7 @@ import { NavController } from 'ionic-angular';
 export class CoreUserLinkDirective implements OnInit {
     @Input() userId: number; // User id to open the profile.
     @Input() courseId?: number; // If set, course id to show the user info related to that course.
-
+    @Input() openScreen?: boolean = true
     protected element: HTMLElement;
 
     constructor(element: ElementRef, @Optional() private navCtrl: NavController) {
@@ -36,13 +36,16 @@ export class CoreUserLinkDirective implements OnInit {
      * Function executed when the component is initialized.
      */
     ngOnInit(): void {
-        this.element.addEventListener('click', (event) => {
-            // If the event prevented default action, do nothing.
-            if (!event.defaultPrevented) {
-                event.preventDefault();
-                event.stopPropagation();
-                this.navCtrl.push('CoreUserProfilePage', { userId: this.userId, courseId: this.courseId });
-            }
-        });
+        if (this.openScreen){
+            this.element.addEventListener('click', (event) => {
+                // If the event prevented default action, do nothing.
+                if (!event.defaultPrevented) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    this.navCtrl.push('CoreUserProfilePage', { userId: this.userId, courseId: this.courseId });
+                }
+            });
+        }
+        
     }
 }

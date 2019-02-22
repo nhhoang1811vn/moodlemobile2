@@ -2,8 +2,8 @@
     "app_id" : "com.socialmedia.toplearning",
     "appname": "TopLearning",
     "desktopappname": "TopLearning",
-    "versioncode" : 150,
-    "versionname" : "1.5.0",
+    "versioncode" : 160,
+    "versionname" : "1.6.0",
     "cache_expiration_time" : 300000,
     "default_lang" : "vi",
     "languages": {"vi": "Viet Nam","en" : "English"},
@@ -33,5 +33,5 @@
     "privacypolicy": "https://toplearning.vn",
     "apisession" : "2785a98d1a9e5dd5dc5bd53f47250f68578059a84c1af5d7deba75bc13a0849c",
     "apisessionkey" : "GVEKUYZHSDORKZIL",
-    "enable_debug" : true
+    "enable_debug" : false
 }

@@ -41,7 +41,7 @@ ion-app.app-root core-courses-course-progress {
             .item-inner {
                 @include padding(null, 0, null, null);
             }
-           
+            border: none;
             .label {
                 display: flex;
                 align-items: center;
@@ -50,6 +50,7 @@ ion-app.app-root core-courses-course-progress {
             }
             .core-course-time{
                 display: table;
+                
                 .icon-time{
                     color : #f98012;
                 }

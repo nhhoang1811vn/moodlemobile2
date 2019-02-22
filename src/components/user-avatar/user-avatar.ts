@@ -13,7 +13,7 @@
 // limitations under the License.
 
 import { Component, Input, OnInit, OnChanges, OnDestroy, SimpleChange } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, IonicTapInput } from 'ionic-angular';
 import { CoreSitesProvider } from '@providers/sites';
 import { CoreAppProvider } from '@providers/app';
 import { CoreUtilsProvider } from '@providers/utils/utils';
@@ -38,6 +38,8 @@ export class CoreUserAvatarComponent implements OnInit, OnChanges, OnDestroy {
     @Input() protected userId?: number; // If provided or found it will be used to link the image to the profile.
     @Input() protected courseId?: number;
     @Input() checkOnline = false; // If want to check and show online status.
+    @Input() enableNavigate = true;
+    
 
     // Variable to check if we consider this user online or not.
     // @TODO: Use setting when available (see MDL-63972) so we can use site setting.
@@ -120,7 +122,7 @@ export class CoreUserAvatarComponent implements OnInit, OnChanges, OnDestroy {
      * Function executed image clicked.
      */
     gotoProfile(event: any): void {
-        if (this.linkProfile && this.userId) {
+        if (this.linkProfile && this.userId && this.enableNavigate) {
             event.preventDefault();
             event.stopPropagation();
             this.navCtrl.push('CoreUserProfilePage', { userId: this.userId, courseId: this.courseId });

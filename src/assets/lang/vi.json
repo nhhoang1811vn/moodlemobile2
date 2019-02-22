@@ -169,7 +169,7 @@
     "addon.messages.searchnomessagesfound": "Không tìm thấy tin nhắn",
     "addon.messages.searchnononcontactsfound": "No non contacts found",
     "addon.messages.sendcontactrequest": "Hiển thị các yêu cầu liên lạc",
-    "addon.messages.showdeletemessages": "Hiện thị các tin nhắn xóa",
+    "addon.messages.showdeletemessages": "Hiện thị các tin nhắn đã xóa",
     "addon.messages.type_blocked": "Đã chặn",
     "addon.messages.type_offline": "Ngoại tuyến",
     "addon.messages.type_online": "Trực tuyến",

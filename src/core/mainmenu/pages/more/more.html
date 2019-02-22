@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
-        <ion-item core-user-link id="ion-item-header">
-            <ion-avatar core-user-avatar [user]="siteInfo" item-start></ion-avatar>
+        <ion-item core-user-link [openScreen]="false" id="ion-item-header">
+            <ion-avatar core-user-avatar [enableNavigate]="false" [user]="siteInfo" item-start></ion-avatar>
             <p>{{siteInfo.fullname}}</p>
         </ion-item>
     </ion-navbar>
